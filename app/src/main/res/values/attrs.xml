@@ -1,0 +1,12 @@
+<resources>
+    <declare-styleable name="MorphButton">
+        <attr name="buttonType" format="enum">
+            <enum name="DIGIT" value="0" />
+            <enum name="CLEAR" value="1" />
+            <enum name="SECONDARY" value="2" />
+            <enum name="TERTIARY" value="3" />
+        </attr>
+        
+        <attr name="drawableSizeRatio" format="float" />
+    </declare-styleable>
+</resources>
