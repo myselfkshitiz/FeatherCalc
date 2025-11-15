@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main_content"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context="com.feather.calculator.MainActivity">
+
+    <View
+        android:id="@+id/focus_anchor" 
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_split"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+    
+    <HorizontalScrollView
+        android:id="@+id/scroll_expression"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" 
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scroll_result" 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <EditText
+            android:id="@+id/text_expression"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:gravity="end|bottom"
+            android:textAlignment="viewEnd"
+            android:textColor="?attr/colorOnSurface"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:cursorVisible="true"
+            android:background="@null"
+            android:inputType="none"
+            android:focusableInTouchMode="true"
+            android:text="" 
+            tools:ignore="RtlSymmetry" />
+            
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+    android:id="@+id/scroll_result"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:paddingTop="0dp"
+    android:paddingBottom="16dp"
+    app:layout_constraintTop_toBottomOf="@id/scroll_expression"
+    app:layout_constraintBottom_toTopOf="@id/guideline_split"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:gravity="bottom|end"
+        android:textSize="32sp"
+        android:textColor="?attr/colorTertiary"
+        android:maxLines="1"
+        android:text=""
+        android:textIsSelectable="true" tools:ignore="RtlSymmetry" />
+
+</HorizontalScrollView>
+
+    <GridLayout
+        android:id="@+id/keypad_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_split">
+
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_clear"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="CLEAR" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_group"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="SECONDARY" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_percent"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="SECONDARY" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_divide"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.9"
+            app:buttonType="SECONDARY" />
+
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_seven"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_eight"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_nine"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_multiply"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.9"
+            app:buttonType="SECONDARY" />
+
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_four"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_five"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_six"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_subtract"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.9"
+            app:buttonType="SECONDARY" />
+
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_one"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_two"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_three"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_add"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.9"
+            app:buttonType="SECONDARY" />
+
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_zero"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_point"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_backspace"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.6"
+            app:buttonType="DIGIT" />
+        <com.feather.calculator.custom_views.MorphButton
+            android:id="@+id/btn_equals"
+            style="@style/KeypadButton"
+            app:drawableSizeRatio="0.9"
+            app:buttonType="TERTIARY" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
