@@ -8,8 +8,6 @@ Marking attr:motionDurationShort3:2130903943 reachable: referenced from in_memor
 Marking attr:motionEasingLinearInterpolator:2130903952 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:exposed_dropdown_menu_content_description:2131689520 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking drawable:mtrl_dropdown_arrow:2131165417 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking style:Widget_Material3_MaterialButtonGroup:2131756029 reachable: referenced from in_memory_r8_base_classes0.dex
-Marking attr:materialButtonToggleGroupStyle:2130903855 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:fragment_container_view_tag:2131230950 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking attr:spinnerStyle:2130904137 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking layout:support_simple_spinner_dropdown_item:2131427437 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -336,6 +334,8 @@ Marking attr:materialButtonStyle:2130903854 reachable: referenced from in_memory
 Marking style:Widget_MaterialComponents_Button:2131756137 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking attr:motionSpringFastSpatial:2130903972 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking style:Motion_Material3_Spring_Standard_Fast_Spatial:2131755327 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking style:Widget_Material3_MaterialButtonGroup:2131756029 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking attr:materialButtonToggleGroupStyle:2130903855 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:androidx_startup:2131689499 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking dimen:abc_cascading_menus_min_smallest_width:2131099670 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking attr:colorPrimary:2130903327 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -763,8 +763,8 @@ anim
 succeeded
 getHorizontallyScrolling
 PathParser
-MButtonGroup
 BAKLAVA
+MButtonGroup
 Spinner
 androidx.savedstate.Restarter
 lge

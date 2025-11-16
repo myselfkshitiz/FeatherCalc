@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.my.calculator1"
+    package="com.feather.calculator"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -24,13 +24,13 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <permission
-        android:name="com.my.calculator1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.feather.calculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.my.calculator1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.feather.calculator.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:name="com.my.calculator1.ui.theme.theme"
+        android:name="com.feather.calculator.ui.theme.theme"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -41,7 +41,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.my.calculator1.ui.MainActivity"
+            android:name="com.feather.calculator.ui.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -53,7 +53,7 @@
 
         <provider
             android:name="com.tom.rv2ide.logsender.utils.LogSenderInstaller"
-            android:authorities="com.my.calculator1.logsender-installer"
+            android:authorities="com.feather.calculator.logsender-installer"
             android:enabled="@bool/logsender_enabled"
             android:exported="false" />
 
@@ -64,7 +64,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.my.calculator1.androidx-startup"
+            android:authorities="com.feather.calculator.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

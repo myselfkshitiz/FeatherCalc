@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.my.calculator1.app-mergeDebugResources-34:/values-tr/values-tr.xml",
+            "outputFile": "com.feather.calculator.app-mergeDebugResources-34:/values-tr/values-tr.xml",
             "map": [
                 {
                     "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/68f7c542a79284eccfdba3ac683065bc/transformed/core-1.17.0/res/values-tr/values-tr.xml",

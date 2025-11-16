@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.my.calculator1.app-mergeDebugResources-34:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.feather.calculator.app-mergeDebugResources-34:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/09ee8665329600f284342ad3e0be45cd/transformed/appcompat-1.7.1/res/values-en-rIN/values-en-rIN.xml",

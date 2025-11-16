@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.my.calculator1.app-mergeDebugResources-34:/values-az/values-az.xml",
+            "outputFile": "com.feather.calculator.app-mergeDebugResources-34:/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/40ed48114f8d4cb1ed23d44ffebcab00/transformed/material-1.13.0/res/values-az/values-az.xml",

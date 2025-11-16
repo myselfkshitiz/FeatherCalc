@@ -4,7 +4,7 @@
     "type": "MERGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.my.calculator1",
+  "applicationId": "com.feather.calculator",
   "variantName": "debug",
   "elements": [
     {

@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="/storage/emulated/0/AndroidIDEProjects/Calculator1/app"
+    dir="/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app"
     name=":app"
     type="APP"
     maven="Calculator1:app:unspecified"

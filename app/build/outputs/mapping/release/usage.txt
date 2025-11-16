@@ -28928,7 +28928,6 @@ com.feather.calculator.logic.CalculationController:
 com.feather.calculator.logic.CalculatorEngine$Companion
 com.feather.calculator.logic.CalculatorEngine:
     public static final com.feather.calculator.logic.CalculatorEngine$Companion Companion
-    public final com.feather.calculator.logic.ExpressionParser parser
     static void <clinit>()
     public static void appendInput()
     public static void appendParentheses()

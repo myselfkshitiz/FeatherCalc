@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/kotlin/com/feather/calculator/logic/CalculationController.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 4087,
+          "line": 105
+        },
+        "start": {
+          "column": 0,
+          "index": 4087,
+          "line": 105
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/kotlin/com/feather/calculator/logic/CalculatorEngine.kt",
+      "selection": {
+        "end": {
+          "column": 28,
+          "index": 17751,
+          "line": 428
+        },
+        "start": {
+          "column": 28,
+          "index": 17751,
+          "line": 428
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/kotlin/com/feather/calculator/logic/CalculatorEngine.kt"
+}

@@ -4,25 +4,6 @@
             "outputFile": "com.feather.calculator.app-mergeReleaseResources-33:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/storage/emulated/0/AndroidIDEProjects/Calculator1/app/src/main/res/values-night/themes.xml",
-                    "from": {
-                        "startLines": "4,1",
-                        "startColumns": "2,2",
-                        "startOffsets": "150,61",
-                        "endLines": "4,2",
-                        "endColumns": "50,10",
-                        "endOffsets": "198,146"
-                    },
-                    "to": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,107",
-                        "endLines": "2,4",
-                        "endColumns": "51,10",
-                        "endOffsets": "102,192"
-                    }
-                },
-                {
                     "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/40ed48114f8d4cb1ed23d44ffebcab00/transformed/material-1.13.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
@@ -57,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/storage/emulated/0/AndroidIDEProjects/Calculator1/app/src/main/res/values-night/theme_overlays.xml",
+                    "source": "/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/res/values-night/theme_overlays.xml",
                     "from": {
                         "startLines": "49,1",
                         "startColumns": "4,4",
@@ -73,6 +54,25 @@
                         "endLines": "86,134",
                         "endColumns": "12,12",
                         "endOffsets": "8178,12649"
+                    }
+                },
+                {
+                    "source": "/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/res/values-night/themes.xml",
+                    "from": {
+                        "startLines": "4,1",
+                        "startColumns": "2,2",
+                        "startOffsets": "150,61",
+                        "endLines": "4,2",
+                        "endColumns": "50,10",
+                        "endOffsets": "198,146"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,107",
+                        "endLines": "2,4",
+                        "endColumns": "51,10",
+                        "endOffsets": "102,192"
                     }
                 }
             ]

@@ -1,250 +1,242 @@
 [
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_exp.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_exp.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_pow.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_pow.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_sqr.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_sqr.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_arccos.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_arccos.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/layout-land_activity_main.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/layout-land/activity_main.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_arcsin.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_arcsin.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_6.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_6.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_pow.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_pow.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_sqrt.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_sqrt.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_sqrt.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_sqrt.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_sqr.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_sqr.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_eq.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_eq.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_3.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_3.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_sub.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_sub.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_sub.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_sub.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_arcsin.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_arcsin.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_tan.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_tan.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_exp.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_exp.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/layout_activity_main.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/layout/activity_main.xml"
+        "merged": "com.feather.calculator.app-debug-36:/xml_backup_rules.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/xml/backup_rules.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_2.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_2.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_sin.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_sin.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_sin.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_sin.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_arctan.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_arctan.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_log.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_log.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_ln.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_ln.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.feather.calculator.app-debug-36:/layout-land_activity_main.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/layout-land/activity_main.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_arctan.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_arctan.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_point.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_point.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_7.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_7.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_const_pi.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_const_pi.xml"
+        "merged": "com.feather.calculator.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/layout/activity_main.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_ic_launcher_monochrome.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/ic_launcher_monochrome.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_5.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_5.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_4.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_4.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_arccos.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_arccos.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_mode_rad.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_mode_rad.xml"
     },
     {
-        "merged": "com.my.calculator1.app-debug-36:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.my.calculator1.app-main-38:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_inv.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_inv.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_cos.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_cos.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_1.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_1.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_10pow.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_10pow.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_point.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_point.xml"
     },
     {
-        "merged": "com.my.calculator1.app-debug-36:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.my.calculator1.app-main-38:/drawable/ic_launcher_background.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_mode_deg.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_mode_deg.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/xml_data_extraction_rules.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/xml/data_extraction_rules.xml"
+        "merged": "com.feather.calculator.app-debug-36:/xml_data_extraction_rules.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_cos.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_cos.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_1.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_1.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_inv.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_inv.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_8.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_8.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_8.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_8.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_eq.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_eq.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_mode_deg.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_mode_deg.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_del.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_del.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_ic_launcher_background.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/ic_launcher_background.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_clr.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_clr.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_del.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_del.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_add.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_add.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_4.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_4.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_5.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_5.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_div.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_div.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_fact.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_fact.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_pct.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_pct.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_log.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_log.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_mul.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_mul.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_fact.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_fact.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_2.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_2.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_7.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_7.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_tan.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_tan.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_parens.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_parens.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_0.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_0.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_9.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_9.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_fun_10pow.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_fun_10pow.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/xml_backup_rules.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/xml/backup_rules.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_backspace.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_backspace.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_op_mul.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_op_mul.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_9.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_9.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_clr.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_clr.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_parens.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_parens.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_backspace.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_backspace.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_div.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_div.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_comma.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_comma.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_pct.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_pct.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_0.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_0.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_fun_ln.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_fun_ln.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_digit_6.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_digit_6.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_ic_launcher_monochrome.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/ic_launcher_monochrome.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_const_e.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_const_e.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_comma.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_comma.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_digit_3.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_digit_3.xml"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_op_add.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_op_add.xml"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.feather.calculator.app-debug-36:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.feather.calculator.app-main-38:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_mode_rad.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_mode_rad.xml"
-    },
-    {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/drawable_glyph_const_e.xml.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/drawable/glyph_const_e.xml"
-    },
-    {
-        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-debug-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.my.calculator1.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.feather.calculator.app-debug-36:/drawable_glyph_const_pi.xml.flat",
+        "source": "com.feather.calculator.app-main-38:/drawable/glyph_const_pi.xml"
     }
 ]
