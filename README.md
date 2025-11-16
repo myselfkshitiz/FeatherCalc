@@ -1,6 +1,6 @@
 # FeatherCalc 🧮
 
-A modern, native Android calculator built with **Kotlin** and **Material 3**, engineered for robust mathematical accuracy and superior stability in handling complex user interactions.
+A modern, native Android calculator app built with **Kotlin** and **Material 3**, engineered for robust mathematical accuracy and superior stability in handling complex user interactions.
 
 ## ✨ Features & Highlights
 

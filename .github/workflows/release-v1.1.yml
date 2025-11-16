@@ -1,0 +1,46 @@
+name: Android Release Build
+
+# 1. TRIGGER: Only run this workflow when a new tag (starting with 'v') is pushed.
+on:
+  push:
+    tags:
+      - 'v*'
+
+# 2. PERMISSIONS: Grant the workflow necessary rights to create a release and upload assets.
+permissions:
+  contents: write
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Grant Execute Permission for Gradle Wrapper
+        run: chmod +x gradlew
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
+
+      # 3. RELEASE: Create the GitHub Release and upload the APK as an asset.
+      - name: Create GitHub Release and Upload APK
+        uses: softprops/action-gh-release@v1
+        with:
+          # Use a wildcard to capture the exact APK file name (e.g., app-release-unsigned.apk)
+          files: app/build/outputs/apk/release/*.apk 
+          
+          # Use the tag name for the release title
+          name: Release ${{ github.ref_name }}
+          
+          # Use the GITHUB_TOKEN which now has 'contents: write' permission
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
