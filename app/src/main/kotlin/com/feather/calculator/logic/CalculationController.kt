@@ -1,9 +1,7 @@
 package com.feather.calculator.logic
 
-// Imports the required data structures from the new dedicated file
 import com.feather.calculator.logic.CalculatorState
 import com.feather.calculator.logic.SavedState
-// Note: CalculatorEngine and ExpressionParser are in the same package
 
 /**
  * Acts as the centralized brain for the calculator, mediating between the UI
