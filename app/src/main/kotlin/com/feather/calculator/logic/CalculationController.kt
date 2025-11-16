@@ -33,12 +33,20 @@ class CalculationController {
      * Handles all keypad input, determining the appropriate action for the engine.
      */
     fun handleInput(value: String, selectionStart: Int, selectionEnd: Int) {
-        // If the last calculation was finalized, clear the expression before starting a new one,
-        // unless the input is an operator that continues the last result.
-        if (resultFinalized && value !in engine.ALL_OPERATORS) {
+        
+        // FIX FOR BUG 1: Determine if the previous state was a fatal error
+        val wasPreviousResultError = resultFinalized && currentState.liveResult.startsWith(CalculatorEngine.ERROR_TAG)
+        
+        // Determine if a non-operator was pressed after finalization
+        val inputShouldClear = resultFinalized && value !in engine.ALL_OPERATORS
+
+        // If the expression was finalized AND the new input is a number/brace/etc. (inputShouldClear)
+        // OR if the expression resulted in an error (wasPreviousResultError), clear the engine fully.
+        if (inputShouldClear || wasPreviousResultError) {
             engine.clear()
             resultFinalized = false
         } else if (resultFinalized && value in engine.ALL_OPERATORS) {
+            // Continuation case: an operator was pressed, so continue with the result
             resultFinalized = false
         }
 

@@ -1,6 +1,9 @@
 package com.feather.calculator.logic
 
 import kotlin.math.round
+import java.lang.IllegalArgumentException 
+import java.lang.StringBuilder 
+import kotlin.text.isDigit 
 
 /**
  * A basic expression parser that supports standard arithmetic operations and parentheses.
@@ -9,18 +12,21 @@ import kotlin.math.round
 class ExpressionParser {
 
     companion object {
-        const val MULTIPLY = "×"
-        const val DIVIDE = "÷"
+        const val MULTIPLY = "×" // Display multiply
+        const val DIVIDE = "÷" // Display divide
         const val PERCENT = "%"
         const val OPEN_BRACE = "("
         const val CLOSE_BRACE = ")"
         
         // Standard arithmetic operators used for internal calculation
-        const val STD_MULTIPLY = "*"
-        const val STD_DIVIDE = "/"
-        const val STD_MINUS = "-"
-        const val STD_PLUS = "+"
-        const val DECIMAL_POINT = "." // Added for cleaner access in CalculatorEngine
+        const val STD_MULTIPLY = "*" // Internal multiply
+        const val STD_DIVIDE = "/" // Internal divide
+        const val STD_MINUS = "-" // Internal minus
+        const val STD_PLUS = "+" // Internal plus
+        const val DECIMAL_POINT = "." 
+
+        private val BINARY_OPERATORS = listOf(STD_PLUS, STD_MINUS, STD_MULTIPLY, STD_DIVIDE)
+        private val UNARY_FOLLOWERS = listOf(OPEN_BRACE, STD_MULTIPLY, STD_DIVIDE, STD_PLUS, STD_MINUS)
     }
 
     /**
@@ -34,180 +40,252 @@ class ExpressionParser {
             .replace(MULTIPLY, STD_MULTIPLY)
             .replace(DIVIDE, STD_DIVIDE)
             .replace("−", STD_MINUS) // Handle any potential non-standard minus
-            .replace(STD_PLUS, STD_PLUS) // Redundant but harmless
+            .replace(STD_PLUS, STD_PLUS) 
 
         // 2. Handle parentheses recursively (solves innermost parentheses first)
         while (mathExpression.contains(OPEN_BRACE)) {
             val start = mathExpression.lastIndexOf(OPEN_BRACE)
-            
-            // Find the matching closing brace after the starting brace
-            var end = -1
-            var braceCount = 1
-            for (i in start + 1 until mathExpression.length) {
-                when (mathExpression[i].toString()) {
-                    OPEN_BRACE -> braceCount++
-                    CLOSE_BRACE -> braceCount--
-                }
-                if (braceCount == 0) {
-                    end = i
-                    break
-                }
-            }
-            
-            if (end == -1) throw IllegalArgumentException("Mismatched braces")
+            if (start == -1) break 
 
-            // Extract the sub-expression and recursively evaluate
-            val subExpression = mathExpression.substring(start + 1, end)
-            val result = evaluate(subExpression)
+            // Find the corresponding closing brace
+            var balance = 1
+            var end = start + 1
+            while (end < mathExpression.length && balance != 0) {
+                when (mathExpression[end].toString()) {
+                    OPEN_BRACE -> balance++
+                    CLOSE_BRACE -> balance--
+                }
+                if (balance != 0) end++
+            }
+
+            if (balance != 0) {
+                // This exception should not be reached if CalculatorEngine handles balance check
+                throw IllegalArgumentException("Mismatched parentheses") 
+            }
+
+            val innerExpression = mathExpression.substring(start + 1, end)
             
-            // Replace the sub-expression and braces with the result
-            val prefix = mathExpression.substring(0, start)
-            val suffix = mathExpression.substring(end + 1)
-            mathExpression = prefix + result.toString() + suffix
+            // Recursively evaluate the inner expression
+            val innerResult = evaluate(innerExpression)
+
+            // Replace the (expression) with the result
+            mathExpression = mathExpression.substring(0, start) + innerResult.toString() + mathExpression.substring(end + 1)
         }
 
-        // 3. Final linear evaluation on the simplified, parenthesis-free expression
+        // 3. Tokenize, handle percentages, and evaluate the flat expression
         val tokens = tokenize(mathExpression)
-        return evaluateNoParentheses(tokens)
+        val percentHandledTokens = handlePercentage(tokens)
+
+        // 4. Final arithmetic evaluation
+        return evaluateNoParentheses(percentHandledTokens)
     }
     
+    // --- Core Arithmetic Evaluation Logic ---
+
     /**
-     * Tokenizes a math expression string into a list of numbers and operators.
-     * Correctly handles unary minus.
+     * Solves a flat arithmetic expression (no parentheses) following the correct order of operations.
+     */
+    private fun evaluateNoParentheses(tokens: List<String>): Double {
+        if (tokens.isEmpty()) return 0.0
+        if (tokens.size == 1) return tokens[0].toDouble()
+        if (tokens.size % 2 == 0) throw IllegalArgumentException("Invalid token count after percentage handling.")
+        
+        // Pass 1: Process Multiplication (*) and Division (/)
+        val tokensPass1 = processOperators(tokens, listOf(STD_MULTIPLY, STD_DIVIDE))
+        
+        // Pass 2: Process Addition (+) and Subtraction (-)
+        val tokensPass2 = processOperators(tokensPass1, listOf(STD_PLUS, STD_MINUS))
+        
+        // The result must be a single number
+        if (tokensPass2.size != 1) {
+             // This indicates an underlying syntax error that wasn't caught by the tokenizer (e.g., 5- or 5 5)
+             throw IllegalArgumentException("Invalid expression structure after arithmetic evaluation.")
+        }
+        return tokensPass2[0].toDouble()
+    }
+
+    /**
+     * Helper to perform a single pass of arithmetic operations (e.g., all * and /).
+     */
+    private fun processOperators(tokens: List<String>, operators: List<String>): List<String> {
+        val result = mutableListOf<String>()
+        var i = 0
+        
+        // Initialize the first result token if the list isn't empty
+        if (tokens.isNotEmpty()) {
+            result.add(tokens[0])
+            i++
+        }
+        
+        while (i < tokens.size) {
+            val operator = tokens[i]
+            
+            if (operators.contains(operator)) {
+                // Operator is in the current pass, perform calculation
+                if (result.isEmpty() || i + 1 >= tokens.size) {
+                    throw IllegalArgumentException("Syntax Error: Operator misuse.")
+                }
+
+                val operand1 = result.removeLast().toDouble()
+                val operand2 = tokens[i + 1].toDouble()
+                var res = 0.0
+
+                when (operator) {
+                    STD_MULTIPLY -> res = operand1 * operand2
+                    STD_DIVIDE -> res = operand1 / operand2
+                    STD_PLUS -> res = operand1 + operand2
+                    STD_MINUS -> res = operand1 - operand2
+                }
+                
+                result.add(res.toString())
+                i += 2 // Skip the operator and the operand
+            } else {
+                // Operator is not in the current pass (e.g., saw a '+' in the * / pass)
+                // Add the current token (which is an operator from the *next* pass)
+                result.add(operator)
+                
+                // Add the subsequent number token
+                if (i + 1 >= tokens.size) {
+                     // Should be impossible due to prior checks, but safe
+                     throw IllegalArgumentException("Syntax Error: Missing operand.")
+                }
+                result.add(tokens[i + 1])
+                i += 2 // Skip the operator and the operand
+            }
+        }
+        
+        return result
+    }
+
+    // --- Tokenization Logic (Corrected for Char vs. String issue) ---
+
+    /**
+     * Breaks the expression into a list of number, operator, and parenthesis tokens.
      */
     private fun tokenize(expression: String): MutableList<String> {
-        val tokens = mutableListOf<String>()
-        var currentNumber = ""
+        val result = mutableListOf<String>()
         var i = 0
+        var isUnary = true 
 
         while (i < expression.length) {
-            val char = expression[i]
+            val char = expression[i] // Read as Char
+            val charStr = char.toString()
 
-            // Determine if the '-' is a unary minus (part of a number)
-            val isUnaryMinus = char == STD_MINUS.first() &&
-                (i == 0 || tokens.isEmpty() && currentNumber.isEmpty() || // Start of expression
-                tokens.isNotEmpty() && !tokens.last().isNumberToken() && tokens.last() != CLOSE_BRACE && tokens.last() != PERCENT || // After an operator/non-number
-                expression[i - 1].toString() == OPEN_BRACE) // After an opening brace
-
-            if (char.isDigit() || char == DECIMAL_POINT.first() || (isUnaryMinus && currentNumber.isEmpty())) {
-                // Append digit, decimal point, or the unary minus starting a new number
-                currentNumber += char
-            } else {
-                if (currentNumber.isNotEmpty()) {
-                    tokens.add(currentNumber)
-                    currentNumber = ""
+            when {
+                // Ignore spaces
+                char.isWhitespace() -> { // Check Char for whitespace
+                    i++
+                    continue
                 }
-                if (!char.isWhitespace()) {
-                    tokens.add(char.toString())
-                }
-            }
-            i++
-        }
-        
-        if (currentNumber.isNotEmpty()) {
-            tokens.add(currentNumber)
-        }
-        
-        return tokens
-    }
 
-    /**
-     * Helper to check if a token represents a number (including negative numbers).
-     */
-    private fun String.isNumberToken() = this.toDoubleOrNull() != null
-    
-    /**
-     * Evaluates a list of tokens that contains only operators (+, -, *, /) and numbers.
-     * Handles operator precedence: *, / before +, -.
-     */
-    private fun evaluateNoParentheses(tokens: MutableList<String>): Double {
-        
-        // 1. Token Cleanup: Convert percentages
-        var currentTokens = convertPercentage(tokens)
-
-        if (currentTokens.isEmpty()) return 0.0
-        
-        // 2. First Pass: Handle Multiplication and Division
-        var i = 0
-        while (i < currentTokens.size) {
-            val token = currentTokens[i]
-            if (token == STD_MULTIPLY || token == STD_DIVIDE) {
-                // Must have operands
-                if (i == 0 || i + 1 >= currentTokens.size) {
-                    throw IllegalArgumentException("Invalid expression structure for MD")
-                }
-                
-                val num1 = currentTokens[i - 1].toDouble()
-                val num2 = currentTokens[i + 1].toDouble()
-                
-                val result = when (token) {
-                    STD_MULTIPLY -> num1 * num2
-                    STD_DIVIDE -> {
-                        if (num2 == 0.0) return Double.POSITIVE_INFINITY // Explicit zero check
-                        num1 / num2
+                // Operator Check
+                BINARY_OPERATORS.contains(charStr) -> {
+                    if (i == expression.length - 1) {
+                         throw IllegalArgumentException("Expression cannot end with an operator.")
                     }
-                    else -> 0.0
+
+                    if (isUnary && (charStr == STD_MINUS || charStr == STD_PLUS)) {
+                        // Unary operator logic
+                        var numberStr = charStr
+                        i++
+
+                        // Consume the entire number part
+                        while (i < expression.length && (expression[i].isDigit() || expression[i].toString() == DECIMAL_POINT)) {
+                            numberStr += expression[i]
+                            i++
+                        }
+                        
+                        // Unary operator must be followed by a number
+                        if (numberStr == charStr) { 
+                            throw IllegalArgumentException("Syntax Error: Unary operator not followed by a number.")
+                        }
+
+                        result.add(numberStr)
+                        isUnary = false 
+                        i--
+
+                    } else {
+                        // Binary operator
+                        result.add(charStr)
+                        isUnary = true
+                    }
                 }
-                
-                // Replace [num1, op, num2] with [result] and adjust index
-                currentTokens.removeAt(i + 1) // remove num2
-                currentTokens.removeAt(i)     // remove op
-                currentTokens[i - 1] = result.toString() // replace num1 with result
-                i -= 1 // Backtrack to check the replaced result and the next token
+
+                // Braces
+                charStr == OPEN_BRACE -> {
+                    result.add(charStr)
+                    isUnary = true
+                }
+                charStr == CLOSE_BRACE -> {
+                    result.add(charStr)
+                    isUnary = false
+                }
+
+                // Numbers (Digits or Decimal Point)
+                char.isDigit() || charStr == DECIMAL_POINT -> {
+                    var numberStr = charStr
+                    i++
+                    var decimalCount = if (charStr == DECIMAL_POINT) 1 else 0
+
+                    while (i < expression.length && (expression[i].isDigit() || expression[i].toString() == DECIMAL_POINT)) {
+                        if (expression[i].toString() == DECIMAL_POINT) {
+                            decimalCount++
+                            if (decimalCount > 1) {
+                                throw IllegalArgumentException("Syntax Error: Multiple decimal points in a single number.")
+                            }
+                        }
+                        numberStr += expression[i]
+                        i++
+                    }
+                    result.add(numberStr)
+                    isUnary = false
+                    i-- 
+                }
+
+                // Percentage
+                charStr == PERCENT -> {
+                    result.add(charStr)
+                    isUnary = false 
+                }
+
+                else -> throw IllegalArgumentException("Unknown symbol: '$charStr'")
             }
             i++
         }
         
-        // 3. Second Pass: Handle Addition and Subtraction
-        
-        if (currentTokens.isEmpty()) return 0.0
-        
-        // Start with the first number. This number may be negative (unary minus).
-        var result = currentTokens[0].toDouble() 
-
-        i = 1 // Start from the first operator
-        while (i < currentTokens.size - 1) {
-            val op = currentTokens[i]
-            
-            // Safely get the number following the operator
-            val number = currentTokens[i + 1].toDouble()
-            
-            when (op) {
-                STD_PLUS -> result += number
-                STD_MINUS -> result -= number
-                else -> {
-                    // This should not happen if M/D pass was successful
-                    throw IllegalArgumentException("Unexpected token during AS evaluation: $op")
-                }
-            }
-            i += 2 // Move to the next operator
+        // Final sanity check 
+        if (BINARY_OPERATORS.contains(result.lastOrNull())) {
+            throw IllegalArgumentException("Expression cannot end with a binary operator.")
         }
         
         return result
     }
 
     /**
-     * Converts percentage tokens (e.g., "50%", "25%+10%") into their evaluated numeric values.
-     * The logic for "base-percentage" (e.g., 100+10%) is implemented here.
+     * Handles percentage logic:
+     * - 50% -> 0.5
+     * - 100 + 50% -> 100 + (100 * 0.5)
      */
-    private fun convertPercentage(tokens: MutableList<String>): MutableList<String> {
+    private fun handlePercentage(tokens: List<String>): List<String> {
         val result = mutableListOf<String>()
         var i = 0
+
         while (i < tokens.size) {
             val token = tokens[i]
+
             if (token == PERCENT) {
-                // Must be preceded by a number
                 if (result.isEmpty() || !result.last().isNumberToken()) {
-                    throw IllegalArgumentException("Percentage must follow a number")
+                    throw IllegalArgumentException("Percentage must follow a number.")
                 }
                 
+                // Get the number preceding the '%'
                 val percentValue = result.removeLast().toDouble()
-                
+
                 // Check for base operation (e.g., 100 + 10%)
                 if (result.isNotEmpty() && (result.last() == STD_PLUS || result.last() == STD_MINUS)) {
                     val operator = result.removeLast()
                     
-                    // Must be preceded by a base number
+                    // Must be preceded by a base number (Handle cases like "+50%")
                     if (result.isEmpty() || !result.last().isNumberToken()) {
                         // Expression was "+50%" or "-50%". Treat as a standard percentage (0.5 or -0.5).
                         result.add(operator) // Restore operator
@@ -233,5 +311,11 @@ class ExpressionParser {
             i++
         }
         return result
+    }
+    
+    // Extension function for cleaner number check
+    private fun String.isNumberToken(): Boolean {
+        // Checks if the token is a number (starts with a digit, decimal, or unary sign)
+        return this.isNotEmpty() && (this[0].isDigit() || this[0].toString() == DECIMAL_POINT || this[0].toString() == STD_MINUS || this[0].toString() == STD_PLUS)
     }
 }

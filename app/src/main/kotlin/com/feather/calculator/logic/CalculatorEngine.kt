@@ -1,6 +1,9 @@
 package com.feather.calculator.logic
 
 import kotlin.math.round
+import java.lang.StringBuilder 
+import java.lang.IllegalArgumentException // Keep this import
+import kotlin.text.isDigit // Keep this import
 
 /**
  * Handles the calculation logic for the calculator.
@@ -10,7 +13,13 @@ import kotlin.math.round
 class CalculatorEngine {
 
     companion object {
-        private const val DIVIDE_BY_ZERO_ERROR = "can't divide by zero"
+        const val ERROR_TAG = "ERROR:" // NEW: Special prefix for the UI to recognize an error state
+        private const val DIVIDE_BY_ZERO_ERROR_MSG = "can't divide by zero" 
+        private const val SYNTAX_ERROR_MSG = "Syntax Error"
+        
+        // NEW: Tagged error constants
+        const val DIVIDE_BY_ZERO_ERROR = ERROR_TAG + DIVIDE_BY_ZERO_ERROR_MSG
+        const val SYNTAX_ERROR = ERROR_TAG + SYNTAX_ERROR_MSG
     }
 
     private var currentExpression: String = ""
@@ -23,6 +32,15 @@ class CalculatorEngine {
     private val DIGITS_AND_PERCENT = listOf("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ExpressionParser.PERCENT)
     private val BRACES = listOf(ExpressionParser.OPEN_BRACE, ExpressionParser.CLOSE_BRACE)
     private val IMPLICIT_MULTIPLY_CHARS = DIGITS_AND_PERCENT + listOf(ExpressionParser.CLOSE_BRACE)
+    
+    // Comprehensive list of symbols that should be trimmed from the end for a live calculation attempt
+    private val LIVE_TRIMMABLE_SYMBOLS: List<String> = ALL_OPERATORS + 
+                                                   listOf(
+                                                       ExpressionParser.STD_MULTIPLY, 
+                                                       ExpressionParser.DECIMAL_POINT,
+                                                       ExpressionParser.PERCENT
+                                                   )
+
 
     /**
      * Initializes the engine with a previously saved expression and cursor position.
@@ -46,17 +64,58 @@ class CalculatorEngine {
         }
         return balance
     }
+    
+    /**
+     * Inserts the multiplication operator ('*') where it is implied.
+     */
+    private fun applyImplicitMultiplication(expression: String): String {
+        val result = StringBuilder()
+        
+        val digitsAndPercentChars = DIGITS_AND_PERCENT.map { it.first() } 
+        val closeBraceChar = ExpressionParser.CLOSE_BRACE.first()
+        val openBraceChar = ExpressionParser.OPEN_BRACE.first()
+        
+        for (i in expression.indices) {
+            val current = expression[i]
+            
+            if (i > 0) {
+                val previous = expression[i - 1]
+                
+                val implicitBeforeOpenBrace = (digitsAndPercentChars.contains(previous) || previous == closeBraceChar) && 
+                                              current == openBraceChar
+                
+                val implicitAfterCloseBrace = previous == closeBraceChar &&
+                                              digitsAndPercentChars.contains(current)
+
+                if (implicitBeforeOpenBrace || implicitAfterCloseBrace) {
+                    result.append(ExpressionParser.STD_MULTIPLY)
+                }
+            }
+            
+            result.append(current)
+        }
+        return result.toString()
+    }
 
     /**
      * Inserts the given input string into the current expression, handling selection.
      */
     private fun insert(input: String, selectionStart: Int, selectionEnd: Int) {
-        val prefix = currentExpression.substring(0, selectionStart)
-        val suffix = currentExpression.substring(selectionEnd)
+        
+        // --- FIX FOR CRASH ---
+        val length = currentExpression.length
+        // Ensure that the indices are clamped within the valid range [0, length]
+        val clampedStart = selectionStart.coerceIn(0, length)
+        val clampedEnd = selectionEnd.coerceIn(0, length)
+        // ---------------------
+
+        val prefix = currentExpression.substring(0, clampedStart) 
+        val suffix = currentExpression.substring(clampedEnd)      
 
         currentExpression = prefix + input + suffix
-        cursorPosition = selectionStart + input.length
+        cursorPosition = clampedStart + input.length
     }
+
 
     /**
      * Checks if the number segment immediately surrounding the cursor position
@@ -233,7 +292,7 @@ class CalculatorEngine {
     }
 
     /**
-     * FIX: Adds parentheses around the current selection or inserts '()' at the cursor position.
+     * Adds parentheses around the current selection or inserts '()' at the cursor position.
      */
     fun appendParentheses(selectionStart: Int, selectionEnd: Int) {
         // If text is selected, wrap it in parentheses.
@@ -257,7 +316,7 @@ class CalculatorEngine {
     }
 
     /**
-     * FIX: Public method to set the cursor position.
+     * Public method to set the cursor position.
      */
     fun setCursorPosition(newCursorPosition: Int) {
         // Coerce ensures the cursor is always between 0 and the expression length.
@@ -278,26 +337,53 @@ class CalculatorEngine {
      * Evaluates the current expression and returns the live result as a formatted string.
      */
     fun calculateLiveResult(): String {
-        // Automatically close any unclosed braces for live calculation
         var expressionToEvaluate = currentExpression
+
+        // 1. Handle brace balancing and apply implicit multiplication
         var balance = getBraceBalance()
         while (balance > 0) {
             expressionToEvaluate += ExpressionParser.CLOSE_BRACE
             balance--
         }
+        expressionToEvaluate = applyImplicitMultiplication(expressionToEvaluate)
+        
+        var tempExpression = expressionToEvaluate
 
-        return try {
-            val result = parser.evaluate(expressionToEvaluate)
+        // 2. Iteratively trim the expression from the end until it evaluates successfully.
+        while (tempExpression.isNotEmpty()) {
+            try {
+                val result = parser.evaluate(tempExpression)
 
-            when {
-                result.isInfinite() -> DIVIDE_BY_ZERO_ERROR
-                result.isNaN() -> ""
-                else -> formatResult(result)
+                // If successful, return the result
+                return when {
+                    result.isInfinite() -> DIVIDE_BY_ZERO_ERROR // Tagged
+                    result.isNaN() -> "" 
+                    else -> formatResult(result)
+                }
+            } catch (e: Exception) {
+                // If evaluation fails (due to a syntax error from a trailing symbol), trim and retry.
+                
+                // If expression is empty after trimming, stop.
+                if (tempExpression.isEmpty()) return ""
+                
+                // Identify the last character of the expression to be trimmed.
+                val lastChar = tempExpression.last().toString()
+
+                // Check if the last character is one of the known "breakable" trailing symbols.
+                val isSafeToTrim = LIVE_TRIMMABLE_SYMBOLS.contains(lastChar)
+
+                if (!isSafeToTrim && tempExpression.length == expressionToEvaluate.length) {
+                    // If the original, full expression failed and the last char is NOT a known trailing fault, 
+                    // return Syntax Error
+                    return SYNTAX_ERROR // Tagged
+                }
+
+                // Truncate and try again
+                tempExpression = tempExpression.substring(0, tempExpression.length - 1)
             }
-        } catch (e: Exception) {
-            // General syntax error (e.g., expression ending with operator)
-            ""
         }
+
+        return "" // Return empty string if the whole expression was emptied out
     }
 
     /**
@@ -312,6 +398,9 @@ class CalculatorEngine {
             finalExpression += ExpressionParser.CLOSE_BRACE
             balance--
         }
+        
+        // Apply implicit multiplication to the expression (now with closed braces)
+        finalExpression = applyImplicitMultiplication(finalExpression)
 
         return try {
             val result = parser.evaluate(finalExpression)
@@ -320,13 +409,13 @@ class CalculatorEngine {
                 result.isInfinite() -> {
                     // Keep the expression so the user can edit the '0'
                     cursorPosition = finalExpression.length
-                    return DIVIDE_BY_ZERO_ERROR
+                    return DIVIDE_BY_ZERO_ERROR // Tagged
                 }
                 result.isNaN() -> {
                     // Handle general errors like syntax issues (NaN)
                     currentExpression = ""
                     cursorPosition = 0
-                    return "Syntax Error"
+                    return SYNTAX_ERROR // Tagged
                 }
                 else -> {
                     // Success case
@@ -340,7 +429,7 @@ class CalculatorEngine {
             // Handle parsing exceptions (e.g., mismatched braces)
             currentExpression = ""
             cursorPosition = 0
-            return "Syntax Error"
+            return SYNTAX_ERROR // Tagged
         }
     }
 

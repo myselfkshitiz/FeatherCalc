@@ -15,8 +15,8 @@ import com.google.android.material.R as MaterialR
 import com.feather.calculator.logic.CalculatorState
 import com.feather.calculator.logic.CalculatorEngine
 import com.feather.calculator.logic.CalculationController
-import com.feather.calculator.logic.ExpressionParser // Required for operator constants
-import com.feather.calculator.custom_views.MorphButton // Assuming this custom class is defined elsewhere
+import com.feather.calculator.logic.ExpressionParser
+import com.feather.calculator.custom_views.MorphButton
 import com.feather.calculator.system.TextSizingManager
 import com.feather.calculator.system.SystemUIHelper
 import com.feather.calculator.system.PreferenceManager
@@ -25,7 +25,6 @@ import com.feather.calculator.system.HapticFeedbackManager
 class MainActivity : AppCompatActivity() {
 
     // --- Private Data Structure for Keypad Configuration ---
-    // We only need the functional value and the drawable resource ID.
     private data class ButtonConfig(val functionalValue: String, val drawableResId: Int)
 
     // --- UI Views ---
@@ -43,7 +42,8 @@ class MainActivity : AppCompatActivity() {
     private val hapticManager: HapticFeedbackManager by lazy { HapticFeedbackManager(this) }
 
     // --- State Properties ---
-    private var colorTertiary: Int = Color.BLACK
+    private var colorTertiary: Int = Color.BLACK // Default color for successful result
+    private var colorError: Int = Color.RED      // NEW: Color for error messages
     private lateinit var defaultExpressionColorStateList: ColorStateList
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,17 +66,21 @@ class MainActivity : AppCompatActivity() {
 
         uiHelper.applyPaddingToContent(mainContentView)
 
+        // 4. Resolve Themed Colors
         colorTertiary = resolveThemedColor(MaterialR.attr.colorTertiary)
+        // Resolve the androidx.appcompat R.attr for colorError
+        colorError = resolveThemedColor(androidx.appcompat.R.attr.colorError) 
+        
         defaultExpressionColorStateList = textExpression.textColors
 
         textExpression.showSoftInputOnFocus = false
         focusAnchor.requestFocus()
 
-        // 4. Load State
+        // 5. Load State
         loadInitialStatePlaceholder()
         loadCalculationStateAsync()
 
-        // 5. Setup Keypad and Listeners
+        // 6. Setup Keypad and Listeners
         setupKeypad()
     }
 
@@ -95,8 +99,12 @@ class MainActivity : AppCompatActivity() {
      */
     private fun resolveThemedColor(attrId: Int): Int {
         val typedValue = TypedValue()
-        theme.resolveAttribute(attrId, typedValue, true)
-        return typedValue.data
+        // Use theme to resolve the attribute value
+        if (theme.resolveAttribute(attrId, typedValue, true)) {
+            return typedValue.data
+        }
+        // Fallback color if resolution fails
+        return Color.RED 
     }
 
     /**
@@ -168,17 +176,12 @@ class MainActivity : AppCompatActivity() {
         )
 
         for ((buttonId, config) in buttonConfigs) {
-            // Reverting to the usage of the custom MorphButton class
             val button = keypadLayout.findViewById<MorphButton>(buttonId)
 
             button?.let {
-                // Set the drawable ID on the custom MorphButton using the method you specified
                 it.setDigit(config.drawableResId)
-
-                // Set content description for accessibility
                 it.contentDescription = config.functionalValue
 
-                // Set the click listener to use the functional value
                 it.setOnClickListener { _ ->
                     handleInput(config.functionalValue)
                 }
@@ -213,11 +216,11 @@ class MainActivity : AppCompatActivity() {
         val state = controller.currentState
         val newExpression = state.expression
 
-        // 1. Handle Coloring
-        val color = if (state.isResultFinalized) colorTertiary else defaultExpressionColorStateList.defaultColor
-        textExpression.setTextColor(color)
+        // 1. Handle Expression Text Coloring
+        val expColor = if (state.isResultFinalized) colorTertiary else defaultExpressionColorStateList.defaultColor
+        textExpression.setTextColor(expColor)
 
-        // 2. Update Text
+        // 2. Update Expression Text
         if (textExpression.text.toString() != newExpression) {
             textExpression.setText(newExpression)
         }
@@ -227,8 +230,18 @@ class MainActivity : AppCompatActivity() {
             textExpression.setSelection(state.cursorPosition)
         }
 
-        // 4. Update Live Result
-        textResult.text = state.liveResult
+        // 4. Update Live Result and handle error coloring
+        val liveResult = state.liveResult
+        if (liveResult.startsWith(CalculatorEngine.ERROR_TAG)) {
+            // Error case: Apply error color and remove the tag
+            val errorMessage = liveResult.substring(CalculatorEngine.ERROR_TAG.length)
+            textResult.text = errorMessage
+            textResult.setTextColor(colorError)
+        } else {
+            // Success case: Restore tertiary color
+            textResult.text = liveResult
+            textResult.setTextColor(colorTertiary) 
+        }
 
         // 5. Adjust text size
         if (shouldUpdateTextSize) {
