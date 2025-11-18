@@ -217,7 +217,9 @@ class MorphButton @JvmOverloads constructor(
         invalidate()
     }
 
-    override fun onDraw(canvas: Canvas) {
+        // ... (rest of the class)
+
+        override fun onDraw(canvas: Canvas) {
         // 1. Draw the rounded background
         rect.set(0f, 0f, width.toFloat(), height.toFloat())
         canvas.drawRoundRect(rect, cornerRadius, cornerRadius, paint)
@@ -226,8 +228,15 @@ class MorphButton @JvmOverloads constructor(
         digitDrawable?.let { drawable ->
             val centerX = width / 2
             val centerY = height / 2
-            // Use the now XML/default controlled ratio
-            val maxDrawableSize = (width * drawableSizeRatio).toInt() 
+            
+            // *** MODIFICATION START: Prioritize Both (Use the Minimum Dimension) ***
+            // Find the smaller of the two dimensions (width or height)
+            val minDimension = width.coerceAtMost(height) 
+            
+            // Base the maximum drawable size on this smaller dimension
+            val maxDrawableSize = (minDimension * drawableSizeRatio).toInt() 
+            // *** MODIFICATION END ***
+            
             val intrinsicWidth = drawable.intrinsicWidth
             val intrinsicHeight = drawable.intrinsicHeight
 
@@ -236,13 +245,21 @@ class MorphButton @JvmOverloads constructor(
             
             if (intrinsicWidth > 0 && intrinsicHeight > 0) {
                 val drawableAspectRatio = intrinsicWidth.toFloat() / intrinsicHeight.toFloat()
+                
+                // Adjust finalWidth/finalHeight to maintain the drawable's aspect ratio
                 if (drawableAspectRatio > 1) { 
-                    finalHeight = (finalWidth / drawableAspectRatio).toInt()
+                    // Landscape drawable: height is the limiting factor within the square bounding box
+                    finalHeight = (maxDrawableSize / drawableAspectRatio).toInt()
+                    finalWidth = maxDrawableSize
                 } else if (drawableAspectRatio < 1) { 
-                    finalWidth = (finalHeight * drawableAspectRatio).toInt()
+                    // Portrait drawable: width is the limiting factor within the square bounding box
+                    finalWidth = (maxDrawableSize * drawableAspectRatio).toInt()
+                    finalHeight = maxDrawableSize
                 }
+                // If aspect ratio is 1, finalWidth and finalHeight remain maxDrawableSize
             }
             
+            // Ensure the final calculated size respects the max allowed size
             finalWidth = finalWidth.coerceAtMost(maxDrawableSize)
             finalHeight = finalHeight.coerceAtMost(maxDrawableSize)
 
@@ -255,6 +272,8 @@ class MorphButton @JvmOverloads constructor(
             drawable.draw(canvas)
         }
     }
+
+
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val size = MeasureSpec.getSize(widthMeasureSpec).coerceAtMost(MeasureSpec.getSize(heightMeasureSpec))

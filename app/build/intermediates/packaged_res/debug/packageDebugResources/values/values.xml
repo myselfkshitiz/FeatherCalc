@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <bool name="is_landscape_or_sw600dp">false</bool>
     <string name="app_name">Calculator</string>
     <style name="AppTheme" parent="Base.AppTheme"/>
     <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
   </style>
     <style name="KeypadButton">
-        
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
-        
         
         <item name="android:layout_rowWeight">1</item>
         <item name="android:layout_columnWeight">1</item>
         
         
-        <item name="android:layout_margin">2dp</item>
     </style>
+    <style name="KeypadButtonScientific" parent="KeypadButton">
+    <item name="android:layout_height">wrap_content</item> 
+    <item name="android:layout_rowWeight">0</item> 
+</style>
     <style name="NavigationItemText" parent="TextAppearance.MaterialComponents.Body2">
        
         <item name="android:textStyle">normal</item>

@@ -16,5 +16,7 @@ data class CalculatorState(
 data class SavedState(
     val expression: String,
     val cursor: Int,
-    val textSizeSp: Float
+    val textSizeSp: Float,
+    // FIX: Add isDegreesMode for persistence
+    val isDegreesMode: Boolean
 )

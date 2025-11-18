@@ -1,4 +1,0 @@
-#Sun Nov 16 04:28:06 GMT 2025
-base.0=/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

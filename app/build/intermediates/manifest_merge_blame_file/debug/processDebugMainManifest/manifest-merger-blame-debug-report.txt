@@ -9,18 +9,18 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
-11-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:4:13-5:74
-11-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:5:9-71
+11-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:4:13-5:74
+11-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:5:9-71
 12    <uses-permission android:name="android.permission.VIBRATE" />
-12-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:6:9-70
-12-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:6:26-67
+12-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:6:9-70
+12-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:6:26-67
 13
 14    <uses-feature
-14-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:7:9-9:32
+14-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:7:9-9:32
 15        android:name="android.hardware.vibrator"
-15-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:8:5-45
+15-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:8:5-45
 16        android:required="false" />
-16-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:9:5-29
+16-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:9:5-29
 17
 18    <queries>
 18-->[logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:23:5-25:15
@@ -51,42 +51,42 @@
 30-->[androidx.core:core:1.17.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/68f7c542a79284eccfdba3ac683065bc/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:11:5-28:15
+32-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:11:5-28:15
 33        android:name="com.feather.calculator.ui.theme.theme"
-33-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:12:5-35
+33-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:12:5-35
 34        android:allowBackup="true"
-34-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:13:5-31
+34-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:13:5-31
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 35-->[androidx.core:core:1.17.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/68f7c542a79284eccfdba3ac683065bc/transformed/core-1.17.0/AndroidManifest.xml:28:18-86
 36        android:debuggable="true"
 37        android:extractNativeLibs="true"
 38        android:icon="@mipmap/ic_launcher"
-38-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:14:5-39
+38-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:14:5-39
 39        android:label="@string/app_name"
-39-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:15:5-37
+39-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:15:5-37
 40        android:roundIcon="@mipmap/ic_launcher_round"
-40-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:16:5-50
+40-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:16:5-50
 41        android:supportsRtl="true"
-41-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:17:5-31
+41-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:17:5-31
 42        android:theme="@style/AppTheme" >
-42-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:18:5-36
+42-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:18:5-36
 43        <activity
-43-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:20:5-27:16
+43-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:20:5-27:16
 44            android:name="com.feather.calculator.ui.MainActivity"
-44-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:21:9-40
+44-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:21:9-40
 45            android:exported="true"
-45-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:22:9-32
+45-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:22:9-32
 46            android:windowSoftInputMode="stateAlwaysHidden" >
-46-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:23:9-56
+46-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:23:9-56
 47            <intent-filter>
-47-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:23:58-26:25
+47-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:23:58-26:25
 48                <action android:name="android.intent.action.MAIN" />
-48-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:24:13-65
-48-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:24:21-62
+48-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:24:13-65
+48-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:24:21-62
 49
 50                <category android:name="android.intent.category.LAUNCHER" />
-50-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:25:13-73
-50-->/storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:25:23-70
+50-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:25:13-73
+50-->/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:25:23-70
 51            </intent-filter>
 52        </activity>
 53

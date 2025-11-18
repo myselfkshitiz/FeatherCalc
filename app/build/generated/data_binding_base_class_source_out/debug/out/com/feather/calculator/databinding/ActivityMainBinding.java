@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
@@ -33,6 +35,40 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final MorphButton btnClear;
 
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnConstE;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnConstPi;
+
   @NonNull
   public final MorphButton btnDivide;
 
@@ -42,14 +78,150 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final MorphButton btnEquals;
 
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final ImageButton btnExpandCollapse;
+
   @NonNull
   public final MorphButton btnFive;
 
   @NonNull
   public final MorphButton btnFour;
 
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnFunCos;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnFunLn;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnFunLog;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnFunSin;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnFunTan;
+
   @NonNull
   public final MorphButton btnGroup;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnInv;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnModeRad;
 
   @NonNull
   public final MorphButton btnMultiply;
@@ -59,6 +231,57 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final MorphButton btnOne;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnOpFact;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnOpPow;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final MorphButton btnOpSqrt;
 
   @NonNull
   public final MorphButton btnPercent;
@@ -84,23 +307,238 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final MorphButton btnZero;
 
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-land/</li>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   * </ul>
+   */
+  @Nullable
+  public final CardView displayCard;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final ConstraintLayout displayControlsContainer;
+
   @NonNull
   public final View focusAnchor;
 
-  @NonNull
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   */
+  @Nullable
+  public final Guideline guidelineDisplaySplit;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   */
+  @Nullable
+  public final Guideline guidelineLeftPane;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final Guideline guidelineLeftSplit;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
   public final Guideline guidelineSplit;
 
-  @NonNull
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final ConstraintLayout keypadContainer;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   */
+  @Nullable
   public final GridLayout keypadGrid;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   */
+  @Nullable
+  public final CardView leftPaneCard;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final ConstraintLayout leftPanelContainer;
 
   @NonNull
   public final ConstraintLayout mainContent;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final GridLayout scientificKeypadGrid;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final ConstraintLayout scientificKeypadWrapper;
 
   @NonNull
   public final HorizontalScrollView scrollExpression;
 
   @NonNull
   public final HorizontalScrollView scrollResult;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-sw600dp/</li>
+   * </ul>
+   */
+  @Nullable
+  public final GridLayout standardKeypadGrid;
 
   @NonNull
   public final EditText textExpression;
@@ -110,29 +548,54 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull MorphButton btnAdd,
       @NonNull MorphButton btnBackspace, @NonNull MorphButton btnClear,
+      @Nullable MorphButton btnConstE, @Nullable MorphButton btnConstPi,
       @NonNull MorphButton btnDivide, @NonNull MorphButton btnEight, @NonNull MorphButton btnEquals,
-      @NonNull MorphButton btnFive, @NonNull MorphButton btnFour, @NonNull MorphButton btnGroup,
-      @NonNull MorphButton btnMultiply, @NonNull MorphButton btnNine, @NonNull MorphButton btnOne,
+      @Nullable ImageButton btnExpandCollapse, @NonNull MorphButton btnFive,
+      @NonNull MorphButton btnFour, @Nullable MorphButton btnFunCos, @Nullable MorphButton btnFunLn,
+      @Nullable MorphButton btnFunLog, @Nullable MorphButton btnFunSin,
+      @Nullable MorphButton btnFunTan, @NonNull MorphButton btnGroup, @Nullable MorphButton btnInv,
+      @Nullable MorphButton btnModeRad, @NonNull MorphButton btnMultiply,
+      @NonNull MorphButton btnNine, @NonNull MorphButton btnOne, @Nullable MorphButton btnOpFact,
+      @Nullable MorphButton btnOpPow, @Nullable MorphButton btnOpSqrt,
       @NonNull MorphButton btnPercent, @NonNull MorphButton btnPoint, @NonNull MorphButton btnSeven,
       @NonNull MorphButton btnSix, @NonNull MorphButton btnSubtract, @NonNull MorphButton btnThree,
-      @NonNull MorphButton btnTwo, @NonNull MorphButton btnZero, @NonNull View focusAnchor,
-      @NonNull Guideline guidelineSplit, @NonNull GridLayout keypadGrid,
-      @NonNull ConstraintLayout mainContent, @NonNull HorizontalScrollView scrollExpression,
-      @NonNull HorizontalScrollView scrollResult, @NonNull EditText textExpression,
+      @NonNull MorphButton btnTwo, @NonNull MorphButton btnZero, @Nullable CardView displayCard,
+      @Nullable ConstraintLayout displayControlsContainer, @NonNull View focusAnchor,
+      @Nullable Guideline guidelineDisplaySplit, @Nullable Guideline guidelineLeftPane,
+      @Nullable Guideline guidelineLeftSplit, @Nullable Guideline guidelineSplit,
+      @Nullable ConstraintLayout keypadContainer, @Nullable GridLayout keypadGrid,
+      @Nullable CardView leftPaneCard, @Nullable ConstraintLayout leftPanelContainer,
+      @NonNull ConstraintLayout mainContent, @Nullable GridLayout scientificKeypadGrid,
+      @Nullable ConstraintLayout scientificKeypadWrapper,
+      @NonNull HorizontalScrollView scrollExpression, @NonNull HorizontalScrollView scrollResult,
+      @Nullable GridLayout standardKeypadGrid, @NonNull EditText textExpression,
       @NonNull TextView textResult) {
     this.rootView = rootView;
     this.btnAdd = btnAdd;
     this.btnBackspace = btnBackspace;
     this.btnClear = btnClear;
+    this.btnConstE = btnConstE;
+    this.btnConstPi = btnConstPi;
     this.btnDivide = btnDivide;
     this.btnEight = btnEight;
     this.btnEquals = btnEquals;
+    this.btnExpandCollapse = btnExpandCollapse;
     this.btnFive = btnFive;
     this.btnFour = btnFour;
+    this.btnFunCos = btnFunCos;
+    this.btnFunLn = btnFunLn;
+    this.btnFunLog = btnFunLog;
+    this.btnFunSin = btnFunSin;
+    this.btnFunTan = btnFunTan;
     this.btnGroup = btnGroup;
+    this.btnInv = btnInv;
+    this.btnModeRad = btnModeRad;
     this.btnMultiply = btnMultiply;
     this.btnNine = btnNine;
     this.btnOne = btnOne;
+    this.btnOpFact = btnOpFact;
+    this.btnOpPow = btnOpPow;
+    this.btnOpSqrt = btnOpSqrt;
     this.btnPercent = btnPercent;
     this.btnPoint = btnPoint;
     this.btnSeven = btnSeven;
@@ -141,12 +604,23 @@ public final class ActivityMainBinding implements ViewBinding {
     this.btnThree = btnThree;
     this.btnTwo = btnTwo;
     this.btnZero = btnZero;
+    this.displayCard = displayCard;
+    this.displayControlsContainer = displayControlsContainer;
     this.focusAnchor = focusAnchor;
+    this.guidelineDisplaySplit = guidelineDisplaySplit;
+    this.guidelineLeftPane = guidelineLeftPane;
+    this.guidelineLeftSplit = guidelineLeftSplit;
     this.guidelineSplit = guidelineSplit;
+    this.keypadContainer = keypadContainer;
     this.keypadGrid = keypadGrid;
+    this.leftPaneCard = leftPaneCard;
+    this.leftPanelContainer = leftPanelContainer;
     this.mainContent = mainContent;
+    this.scientificKeypadGrid = scientificKeypadGrid;
+    this.scientificKeypadWrapper = scientificKeypadWrapper;
     this.scrollExpression = scrollExpression;
     this.scrollResult = scrollResult;
+    this.standardKeypadGrid = standardKeypadGrid;
     this.textExpression = textExpression;
     this.textResult = textResult;
   }
@@ -196,6 +670,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_const_e;
+      MorphButton btnConstE = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_const_pi;
+      MorphButton btnConstPi = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.btn_divide;
       MorphButton btnDivide = ViewBindings.findChildViewById(rootView, id);
       if (btnDivide == null) {
@@ -214,6 +694,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_expand_collapse;
+      ImageButton btnExpandCollapse = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.btn_five;
       MorphButton btnFive = ViewBindings.findChildViewById(rootView, id);
       if (btnFive == null) {
@@ -226,11 +709,32 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_fun_cos;
+      MorphButton btnFunCos = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_fun_ln;
+      MorphButton btnFunLn = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_fun_log;
+      MorphButton btnFunLog = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_fun_sin;
+      MorphButton btnFunSin = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_fun_tan;
+      MorphButton btnFunTan = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.btn_group;
       MorphButton btnGroup = ViewBindings.findChildViewById(rootView, id);
       if (btnGroup == null) {
         break missingId;
       }
+
+      id = R.id.btn_inv;
+      MorphButton btnInv = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_mode_rad;
+      MorphButton btnModeRad = ViewBindings.findChildViewById(rootView, id);
 
       id = R.id.btn_multiply;
       MorphButton btnMultiply = ViewBindings.findChildViewById(rootView, id);
@@ -249,6 +753,15 @@ public final class ActivityMainBinding implements ViewBinding {
       if (btnOne == null) {
         break missingId;
       }
+
+      id = R.id.btn_op_fact;
+      MorphButton btnOpFact = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_op_pow;
+      MorphButton btnOpPow = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.btn_op_sqrt;
+      MorphButton btnOpSqrt = ViewBindings.findChildViewById(rootView, id);
 
       id = R.id.btn_percent;
       MorphButton btnPercent = ViewBindings.findChildViewById(rootView, id);
@@ -298,25 +811,49 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.display_card;
+      CardView displayCard = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.display_controls_container;
+      ConstraintLayout displayControlsContainer = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.focus_anchor;
       View focusAnchor = ViewBindings.findChildViewById(rootView, id);
       if (focusAnchor == null) {
         break missingId;
       }
 
+      id = R.id.guideline_display_split;
+      Guideline guidelineDisplaySplit = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.guideline_left_pane;
+      Guideline guidelineLeftPane = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.guideline_left_split;
+      Guideline guidelineLeftSplit = ViewBindings.findChildViewById(rootView, id);
+
       id = R.id.guideline_split;
       Guideline guidelineSplit = ViewBindings.findChildViewById(rootView, id);
-      if (guidelineSplit == null) {
-        break missingId;
-      }
+
+      id = R.id.keypad_container;
+      ConstraintLayout keypadContainer = ViewBindings.findChildViewById(rootView, id);
 
       id = R.id.keypad_grid;
       GridLayout keypadGrid = ViewBindings.findChildViewById(rootView, id);
-      if (keypadGrid == null) {
-        break missingId;
-      }
+
+      id = R.id.left_pane_card;
+      CardView leftPaneCard = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.left_panel_container;
+      ConstraintLayout leftPanelContainer = ViewBindings.findChildViewById(rootView, id);
 
       ConstraintLayout mainContent = (ConstraintLayout) rootView;
+
+      id = R.id.scientific_keypad_grid;
+      GridLayout scientificKeypadGrid = ViewBindings.findChildViewById(rootView, id);
+
+      id = R.id.scientific_keypad_wrapper;
+      ConstraintLayout scientificKeypadWrapper = ViewBindings.findChildViewById(rootView, id);
 
       id = R.id.scroll_expression;
       HorizontalScrollView scrollExpression = ViewBindings.findChildViewById(rootView, id);
@@ -329,6 +866,9 @@ public final class ActivityMainBinding implements ViewBinding {
       if (scrollResult == null) {
         break missingId;
       }
+
+      id = R.id.standard_keypad_grid;
+      GridLayout standardKeypadGrid = ViewBindings.findChildViewById(rootView, id);
 
       id = R.id.text_expression;
       EditText textExpression = ViewBindings.findChildViewById(rootView, id);
@@ -343,10 +883,14 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, btnAdd, btnBackspace, btnClear,
-          btnDivide, btnEight, btnEquals, btnFive, btnFour, btnGroup, btnMultiply, btnNine, btnOne,
-          btnPercent, btnPoint, btnSeven, btnSix, btnSubtract, btnThree, btnTwo, btnZero,
-          focusAnchor, guidelineSplit, keypadGrid, mainContent, scrollExpression, scrollResult,
-          textExpression, textResult);
+          btnConstE, btnConstPi, btnDivide, btnEight, btnEquals, btnExpandCollapse, btnFive,
+          btnFour, btnFunCos, btnFunLn, btnFunLog, btnFunSin, btnFunTan, btnGroup, btnInv,
+          btnModeRad, btnMultiply, btnNine, btnOne, btnOpFact, btnOpPow, btnOpSqrt, btnPercent,
+          btnPoint, btnSeven, btnSix, btnSubtract, btnThree, btnTwo, btnZero, displayCard,
+          displayControlsContainer, focusAnchor, guidelineDisplaySplit, guidelineLeftPane,
+          guidelineLeftSplit, guidelineSplit, keypadContainer, keypadGrid, leftPaneCard,
+          leftPanelContainer, mainContent, scientificKeypadGrid, scientificKeypadWrapper,
+          scrollExpression, scrollResult, standardKeypadGrid, textExpression, textResult);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

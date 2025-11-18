@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.TypedValue
 import android.widget.EditText
 import android.widget.HorizontalScrollView
+import android.widget.TextView // Import TextView is needed for the new function
 
 /**
  * Utility class dedicated to dynamically adjusting the size of the expression EditText
@@ -15,6 +16,10 @@ class TextSizingManager(context: Context) {
 
     private val MAX_TEXT_SIZE_SP = 64f
     private val MIN_TEXT_SIZE_SP = 54f
+    
+    // Define a size for when the result text is expanded/toggled.
+    // This should be small and fixed to maximize content space.
+    private val EXPANDED_RESULT_SIZE_SP = 24f 
 
     /**
      * Calculates and applies the appropriate text size to the EditText.
@@ -73,6 +78,17 @@ class TextSizingManager(context: Context) {
 
         editText.textSize = newSizeSp
     }
+    
+    /**
+     * Applies a fixed, smaller text size to the result TextView when the user
+     * has toggled the result to be expanded/full-width.
+     * * @param textView The TextView displaying the result.
+     */
+    fun adjustTextSizeForExpandedResult(textView: TextView) {
+        // Force small font size to maximize space for expanded result text
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, EXPANDED_RESULT_SIZE_SP)
+    }
+
 
     /**
      * Returns the default maximum text size in SP.

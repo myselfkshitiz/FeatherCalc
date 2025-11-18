@@ -11,17 +11,20 @@
         <item name="android:textColor">?attr/colorOnSurface</item>
 </style>
     <style name="KeypadButton">
-        <!-- CRITICAL FIX: Setting dimensions to 0dp tells GridLayout to size the item 
-             based entirely on the rowWeight and columnWeight below. -->
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         
-        <!-- Set the layout weight to 1 for both row and column so they divide the space equally -->
         <item name="android:layout_rowWeight">1</item>
         <item name="android:layout_columnWeight">1</item>
         
-        <!-- Use 2dp margin for spacing between buttons (as requested) -->
-        <item name="android:layout_margin">2dp</item>
+        
     </style>
+
+   <style name="KeypadButtonScientific" parent="KeypadButton">
+    <item name="android:layout_height">wrap_content</item> 
+    <item name="android:layout_rowWeight">0</item> 
+</style>
+
+
         
 </resources>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:18:1-44:12
 MERGED from [androidx.databinding:viewbinding:8.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/057a72b4b166682aaaad8a98027b717a/transformed/viewbinding-8.13.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/40ed48114f8d4cb1ed23d44ffebcab00/transformed/material-1.13.0/AndroidManifest.xml:17:1-24:12
@@ -46,30 +46,30 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] /data/user/0/com.tom.rv2ide/
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/b6c70897cafecf945cc550b851689c86/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core-viewtree:1.0.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/02b1a9e714e50933490f76dc5f0b0380/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
 	package
-		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.FOREGROUND_SERVICE_DATA_SYNC
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:4:13-5:74
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:4:13-5:74
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:5:9-71
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:5:9-71
 uses-permission#android.permission.VIBRATE
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:6:9-70
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:6:9-70
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:6:26-67
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:6:26-67
 uses-feature#android.hardware.vibrator
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:7:9-9:32
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:7:9-9:32
 	android:required
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:9:5-29
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:9:5-29
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:8:5-45
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:8:5-45
 application
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:11:5-28:15
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:11:5-28:15
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:11:5-28:15
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:11:5-28:15
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:31:5-42:19
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:31:5-42:19
 MERGED from [com.google.android.material:material:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/40ed48114f8d4cb1ed23d44ffebcab00/transformed/material-1.13.0/AndroidManifest.xml:22:5-20
@@ -89,45 +89,45 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /data/user/0/com.tom.rv2ide
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/745f5a8ad12418f87322283e5f6b61bc/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/745f5a8ad12418f87322283e5f6b61bc/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
-		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.17.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/68f7c542a79284eccfdba3ac683065bc/transformed/core-1.17.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:17:5-31
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:17:5-31
 	android:label
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:15:5-37
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:15:5-37
 	android:roundIcon
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:16:5-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:16:5-50
 	android:icon
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:14:5-39
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:14:5-39
 	android:allowBackup
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:13:5-31
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:13:5-31
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:18:5-36
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:18:5-36
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:12:5-35
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:12:5-35
 activity#com.feather.calculator.ui.MainActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:20:5-27:16
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:20:5-27:16
 	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:23:9-56
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:23:9-56
 	android:exported
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:22:9-32
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:22:9-32
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:21:9-40
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:21:9-40
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:23:58-26:25
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:23:58-26:25
 action#android.intent.action.MAIN
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:24:13-65
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:24:13-65
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:24:21-62
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:24:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:25:13-73
+ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:25:13-73
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml:25:23-70
+		ADDED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml:25:23-70
 uses-sdk
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
-INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
+INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:21:5-44
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:21:5-44
 MERGED from [androidx.databinding:viewbinding:8.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/057a72b4b166682aaaad8a98027b717a/transformed/viewbinding-8.13.0/AndroidManifest.xml:5:5-44
@@ -211,9 +211,9 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] /data/user/0/com
 MERGED from [androidx.core:core-viewtree:1.0.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/02b1a9e714e50933490f76dc5f0b0380/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/02b1a9e714e50933490f76dc5f0b0380/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
-		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalc/app/src/main/AndroidManifest.xml
+		INJECTED from /storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/AndroidManifest.xml
 queries
 ADDED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.0.0/transforms/cd9338b4c1fd6c01c2d135aa5926be02/transformed/logger-runtime/AndroidManifest.xml:23:5-25:15
 package#com.tom.rv2ide

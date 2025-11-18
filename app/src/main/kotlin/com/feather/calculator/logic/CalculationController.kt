@@ -1,8 +1,5 @@
 package com.feather.calculator.logic
 
-import com.feather.calculator.logic.CalculatorState
-import com.feather.calculator.logic.SavedState
-
 /**
  * Acts as the centralized brain for the calculator, mediating between the UI
  * (MainActivity) and the core engine (CalculatorEngine).
@@ -11,7 +8,14 @@ class CalculationController {
     private val engine = CalculatorEngine()
     private var resultFinalized: Boolean = false
 
-    // Uses the imported CalculatorState
+    // State property to track the calculator's mode
+    var isDegreesMode: Boolean = false
+        private set
+
+    companion object {
+        val FUNCTION_PREFIXES = listOf("√(", "sin(", "cos(", "tan(", "ln(", "log(")
+    }
+
     var currentState: CalculatorState = CalculatorState()
         private set(value) {
             field = value
@@ -20,70 +24,95 @@ class CalculationController {
     /**
      * Loads state from SharedPreferences/SavedState and initializes the engine.
      */
-    fun loadSavedState(saved: SavedState) { // Uses the imported SavedState
-        // These methods were missing in your local engine file.
-        engine.loadState(saved.expression, saved.cursor) 
-        // Recalculate and update the state based on the loaded expression
+    fun loadSavedState(saved: SavedState) {
+        engine.loadState(saved.expression, saved.cursor)
+        this.isDegreesMode = saved.isDegreesMode
         updateState()
     }
+
+    /**
+     * Toggles the calculation mode between Degrees and Radians.
+     */
+    fun setDegreesMode(inDegrees: Boolean) {
+        isDegreesMode = inDegrees
+        updateState() // Recalculate live result with new mode
+    }
+
+    /**
+     * Handles all keypad input, determining the appropriate action for the engine.
+     */
+    // In CalculationController.kt
 
     /**
      * Handles all keypad input, determining the appropriate action for the engine.
      */
     fun handleInput(value: String, selectionStart: Int, selectionEnd: Int) {
         
-        // FIX FOR BUG 1: Determine if the previous state was a fatal error
-        val wasPreviousResultError = resultFinalized && currentState.liveResult.startsWith(CalculatorEngine.ERROR_TAG)
-        
-        // Determine if a non-operator was pressed after finalization
-        val inputShouldClear = resultFinalized && value !in engine.ALL_OPERATORS
-
-        // If the expression was finalized AND the new input is a number/brace/etc. (inputShouldClear)
-        // OR if the expression resulted in an error (wasPreviousResultError), clear the engine fully.
-        if (inputShouldClear || wasPreviousResultError) {
-            engine.clear()
-            resultFinalized = false
-        } else if (resultFinalized && value in engine.ALL_OPERATORS) {
-            // Continuation case: an operator was pressed, so continue with the result
-            resultFinalized = false
-        }
-
-        // Delegate input handling to the engine
+        // --- 1. Handle Immediate Action Commands (like CLR/DEL) first ---
         when (value) {
-            "CLR" -> engine.clear()
-            "DEL" -> engine.backspace(selectionStart, selectionEnd)
-            "=" -> {
-                finalizeCalculation()
-                return // Finalize calculation updates state internally
+            "CLR", "AC" -> {
+                engine.clear()
+                resultFinalized = false // Ensure state is reset
+                updateState()
+                return // Stop processing other logic
             }
-            ExpressionParser.OPEN_BRACE + ExpressionParser.CLOSE_BRACE -> engine.appendParentheses(selectionStart, selectionEnd) // This is now guaranteed to exist
-            else -> engine.appendInput(value, selectionStart, selectionEnd)
+            "DEL" -> {
+                // DEL works regardless of resultFinalized, but we can keep it inside the if/else
+                // if we want DEL to not trigger clearing the finalized state for a new input.
+            }
+        }
+        // --- End Immediate Action Commands ---
+
+        val wasPreviousResultError = currentState.liveResult.startsWith(CalculatorEngine.ERROR_TAG)
+        
+        if (resultFinalized && !wasPreviousResultError) {
+            // If previous result was final and not error, clear the state for new input
+            when (value) {
+                in engine.ALL_OPERATORS -> {
+                    // Operator, keep the result as the starting expression
+                    engine.appendInput(value, engine.getExpression().length, engine.getExpression().length)
+                }
+                else -> {
+                    // Digit/Function/Brace, clear and start new expression
+                    engine.clear()
+                    engine.appendInput(value, 0, 0)
+                }
+            }
+            resultFinalized = false
+        } else {
+            // Standard input (including DEL logic if we don't move it)
+            when (value) {
+                // We moved CLR/AC up top.
+                "DEL" -> engine.backspace(selectionStart, selectionEnd)
+                ExpressionParser.STD_MINUS + ExpressionParser.STD_PLUS -> engine.toggleSign(selectionStart, selectionEnd)
+                ExpressionParser.OPEN_BRACE + ExpressionParser.CLOSE_BRACE -> engine.appendParentheses(selectionStart, selectionEnd)
+                else -> engine.appendInput(value, selectionStart, selectionEnd)
+            }
         }
 
         updateState()
     }
 
+
     /**
      * Manually updates the cursor position (e.g., when the user taps the EditText).
      */
     fun updateCursor(newCursorPosition: Int) {
-        engine.setCursorPosition(newCursorPosition) // This is now guaranteed to exist
+        engine.setCursorPosition(newCursorPosition)
         updateState()
     }
 
     /**
      * Calculates the final result and sets the state to finalized.
      */
-    private fun finalizeCalculation() {
-        // Finalize calculation in the engine
-        val finalResult = engine.finalizeCalculation()
+    fun finalizeCalculation() {
+        val finalResult = engine.finalizeCalculation(isDegreesMode)
 
-        // Update the state based on the final engine state
         currentState = CalculatorState(
             expression = engine.getExpression(),
             liveResult = finalResult,
             cursorPosition = engine.getCursorPosition(),
-            isResultFinalized = true // Mark as finalized
+            isResultFinalized = true
         )
         resultFinalized = true
     }
@@ -92,12 +121,15 @@ class CalculationController {
      * Recalculates the live result and updates the internal state property.
      */
     private fun updateState() {
-        val liveResult = engine.calculateLiveResult()
+        val liveResult = engine.calculateLiveResult(isDegreesMode)
+        
         currentState = CalculatorState(
             expression = engine.getExpression(),
             liveResult = liveResult,
             cursorPosition = engine.getCursorPosition(),
-            isResultFinalized = false // Ensure false unless explicitly finalized
+            isResultFinalized = false
         )
     }
+    
+    // Removed: fun toggleResultExpansion()
 }

@@ -1,0 +1,50 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/kotlin/com/feather/calculator/ui/MainActivity.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 18736,
+          "line": 451
+        },
+        "start": {
+          "column": 0,
+          "index": 18736,
+          "line": 451
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/res/layout/activity_main.xml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 15108,
+          "line": 343
+        },
+        "start": {
+          "column": 0,
+          "index": 15108,
+          "line": 343
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/kotlin/com/feather/calculator/logic/CalculatorEngine.kt",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 15693,
+          "line": 397
+        },
+        "start": {
+          "column": 0,
+          "index": 15693,
+          "line": 397
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/FeatherCalcEXP1/app/src/main/kotlin/com/feather/calculator/logic/CalculatorEngine.kt"
+}
